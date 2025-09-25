@@ -7,6 +7,8 @@ const OpenAI = require("openai");
 const PORT = process.env.PORT || 4000;
 const app = express();
 
+// did account changed for free credits
+
 app.use(cors());
 app.use(express.json({ limit: "1mb" }));
 
