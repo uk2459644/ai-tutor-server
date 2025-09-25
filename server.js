@@ -141,7 +141,7 @@ app.post("/api/did-talk", async (req, res) => {
 
         console.log("D-ID response:", createResponse);
         if (!createResponse.ok) {
-            console.error("D-ID creation failed:", await createResponse.text());
+            // console.error("D-ID creation failed:", await createResponse.text());
             res.json({ error: "D-ID creation failed", detail: await createResponse.text() });
         }
         // First, you must parse the JSON to get the ID
