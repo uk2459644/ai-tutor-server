@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: ai-tutor-server
+    env: node
+    plan: free
+    buildCommand: "npm install"
+    startCommand: "npm start"
+    envVars:
+      - key: DID_API_KEY
+        sync: false
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: DID_SOURCE_URL
+        sync: false
