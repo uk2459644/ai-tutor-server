@@ -173,9 +173,9 @@ app.post("/api/did-talk", async (req, res) => {
         }
         else {
             console.error("Video processing failed:", talkResult);
+            res.status(500).json({ error: "D-ID processing failed", detail: talkResult });
         }
-        res.status(500).json({ error: "D-ID processing failed", detail: talkResult });
-
+       
         // D-ID returns output_url (or an id you must poll). We return whatever they gave.
 
     } catch (err) {
